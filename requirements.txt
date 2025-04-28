@@ -1,0 +1,7 @@
+dotenv
+langchain
+transformers
+diffusers
+torch
+fastapi
+huggingface_hub
