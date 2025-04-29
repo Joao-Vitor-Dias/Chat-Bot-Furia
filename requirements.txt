@@ -5,3 +5,6 @@ diffusers
 torch
 fastapi
 huggingface_hub
+requests
+beautifulsoup4
+pandas
