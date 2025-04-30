@@ -1,10 +1,8 @@
 dotenv
 langchain
-transformers
-diffusers
 torch
 fastapi
-huggingface_hub
+google-generativeai
 requests
 beautifulsoup4
 pandas
