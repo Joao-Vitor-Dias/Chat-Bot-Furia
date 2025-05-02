@@ -4,13 +4,13 @@ import google.generativeai as genai
 
 hoje = datetime.now().strftime("%d/%m/%Y")
 
-df_proximas = pd.read_json("base_proximas_lol.json")
-df_ultimas = pd.read_json("base_ultimas_lol.json")
-df_player_stats = pd.read_json("base_stats_jogador_lol.json")
+df_proximas = pd.read_json("src\\dados\\base_proximas_lol.json")
+df_ultimas = pd.read_json("src\\dados\\base_ultimas_lol.json")
+df_player_stats = pd.read_json("src\\dados\\base_stats_jogador_lol.json")
 
-df_proximas_cs = pd.read_json("base_proximas_cs.json")
-df_ultimas_cs = pd.read_json("base_ultimas_cs.json")
-df_player_stats_cs = pd.read_json("base_stats_jogador_cs.json")
+df_proximas_cs = pd.read_json("src\\dados\\base_proximas_cs.json")
+df_ultimas_cs = pd.read_json("src\\dados\\base_ultimas_cs.json")
+df_player_stats_cs = pd.read_json("src\\dados\\base_stats_jogador_cs.json")
 
 
 modelo_doc = genai.GenerativeModel(

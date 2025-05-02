@@ -66,7 +66,7 @@ for proxima_partida in proximas_partidas:
 lista_proximas_partidas = pd.DataFrame(partidas, columns= ["TIME DA FURIA", "TIME ADVERSARIO","DATA","TORNEIO"])  
 
 # O codigo abaixo vai criar um arquivo CSV com as informacoes extraidas do site sobre as proximas partidas
-lista_proximas_partidas.to_json("base_proximas_lol.json", orient="records", indent=4, force_ascii=False, index=False)
+lista_proximas_partidas.to_json("src\\dados\\base_proximas_lol.json", orient="records", indent=4, force_ascii=False, index=False)
 
 # O codigo abaixo vai exibir no terminal as informacoes das proximas partidas
 print(lista_proximas_partidas)

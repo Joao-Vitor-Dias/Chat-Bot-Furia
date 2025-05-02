@@ -67,7 +67,7 @@ lista_ultimas_partidas = pd.DataFrame(partidas,columns=["TIME 1", "PLACAR", "TIM
 
 
 # O codigo abaixo vai criar um arquivo CSV com as informacoes extraidas do site sobre as ultimas partidas
-lista_ultimas_partidas.to_json("base_ultimas_lol.json", orient="records", indent=4, force_ascii=False, index=False) 
+lista_ultimas_partidas.to_json("src\\dados\\base_ultimas_lol.json", orient="records", indent=4, force_ascii=False, index=False) 
 
 # O codigo abaixo vai exibir no terminal as informacoes das ultimas partidas
 print(lista_ultimas_partidas)

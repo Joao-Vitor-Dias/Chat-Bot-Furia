@@ -3,7 +3,7 @@ import pandas as pd
 import json
 import os
 
-arquivo = "base_stats_jogador_cs.json"
+arquivo = "src\\dados\\base_stats_jogador_cs.json"
 
 url = "https://api.bo3.gg/api/v1/matches/furia-vs-the-mongolz-09-04-2025/players_stats"
 
@@ -42,7 +42,7 @@ if not os.path.exists(arquivo):
     # Se o arquivo não existir, cria com o DataFrame diretamente
     df_stats_jogadores.to_json(arquivo, orient="records", indent=4, force_ascii=False, index=False)
 else:
-    with open("base_stats_jogador_cs.json", "r+", encoding="utf-8") as f:
+    with open("src\\dados\\base_stats_jogador_cs.json", "r+", encoding="utf-8") as f:
         dados = json.load(f)
         dados.extend(df_stats_jogadores.to_dict(orient="records"))
         f.seek(0)
