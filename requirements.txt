@@ -3,3 +3,4 @@ google-generativeai
 requests
 beautifulsoup4
 pandas
+streamlit

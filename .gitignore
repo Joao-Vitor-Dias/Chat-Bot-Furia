@@ -1,6 +1,3 @@
 .env
 venv/
 __pycache__
-teste_estats_jogador.csv
-teste_proximas.csv
-teste_ultimas.csv

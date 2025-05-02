@@ -68,7 +68,8 @@ history_inicial = [
     {
         "role": "user",
         "parts": [f"""
-                    Sempre que perguntarem sobre a organizacao da FURIA ou algo do tipo responda com seguintes informacoes:Somos FURIA.
+                    Sempre que perguntarem sobre a organizacao da FURIA ou algo do tipo responda com seguintes informacoes de uma forma resumida e com animacao:
+                    Somos FURIA.
                     Uma organização de esports que nasceu do desejo de representar o Brasil no CS e conquistou muito mais que isso: expandimos nossas ligas, disputamos os principais títulos, adotamos novos objetivos e ganhamos um propósito maior. Somos muito mais que o sucesso competitivo.
                     Somos um movimento sociocultural.
                     Nossa história é de pioneirismo, grandes conquistas e tradição. Nosso presente é de desejo, garra e estratégia. A pantera estampada no
@@ -80,22 +81,19 @@ history_inicial = [
     {
         "role": "user",
         "parts": [f"""
-                    Sempre que perguntarem a respeito de titulos da FURIA responda com as seguintes informacoes:
+                    Sempre que perguntarem a respeito de titulos da FURIA responda com as seguintes informacoes de uma forma resumida e com animacao:
                     O time de CS:GO da FURIA é um dos mais notáveis, com destaque para:
 
                     IEM Rio Major 2022: Primeira equipe brasileira classificada para o torneio .
-                    The Enemy
 
                     PGL Major Stockholm 2021: Chegada às quartas de final, consolidando-se como uma das principais equipes da região .
 
                     PGL Major Antwerp 2022: Novo recorde com a classificação para as quartas de final .
 
                     DreamHack Masters Spring 2020: Vitória na região da América do Norte .
-                    Mais Esports+3ge+3The Enemy+3
 
                     ESL Pro League Season 12: North America: Conquista significativa na temporada .
-                    Liquipedia+6dust2.com.br+6Red Bull+6
-
+                  
                     Elisa Invitational Summer 2021: Título importante na competição .
 
                     Em 2023, a FURIA também se destacou ao vencer os dois campeonatos de CS:GO na Brasil Game Show (BGS), tanto no masculino quanto no feminino 

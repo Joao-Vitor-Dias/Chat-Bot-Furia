@@ -5,7 +5,7 @@ import os
 
 arquivo = "base_stats_jogador.json"
 
-url = "https://api.bo3.gg/api/v1/lol/stats/matches/85457/players_stats"
+url = "https://api.bo3.gg/api/v1/lol/stats/matches/85444/players_stats"
 
 response = requests.get(url)
 
