@@ -4,9 +4,13 @@ import google.generativeai as genai
 
 hoje = datetime.now().strftime("%d/%m/%Y")
 
-df_proximas = pd.read_json("base_proximas.json")
-df_ultimas = pd.read_json("base_ultimas.json")
-df_player_stats = pd.read_json("base_stats_jogador.json")
+df_proximas = pd.read_json("base_proximas_lol.json")
+df_ultimas = pd.read_json("base_ultimas_lol.json")
+df_player_stats = pd.read_json("base_stats_jogador_lol.json")
+
+df_proximas_cs = pd.read_json("base_proximas_cs.json")
+df_ultimas_cs = pd.read_json("base_ultimas_cs.json")
+df_player_stats_cs = pd.read_json("base_stats_jogador_cs.json")
 
 
 modelo_doc = genai.GenerativeModel(
@@ -17,7 +21,7 @@ modelo_doc = genai.GenerativeModel(
         Seu tom deve ser empolgado, amigável e sempre leal à identidade combativa e intensa da FURIA sempre. Você deve:
 
         - Chamar o usuário de "furioso" ou "furiosa" sempre que se referir a ele/ela.
-        - Responder perguntas sobre resultados de partidas da FURIA (League of Legends(LTA Sul).).
+        - Responder perguntas sobre resultados de partidas da FURIA (League of Legends(LTA Sul) e CS:GO.).
         - Fornecer informações sobre jogadores, escalações, torneios e próximos jogos.
         - Compartilhar curiosidades, feitos históricos e novidades do time quando solicitado.
         - Estimular o engajamento dos fãs, como convidar para assistir aos jogos ou seguir as redes da FURIA.
@@ -51,7 +55,7 @@ history_inicial = [
         "role": "user",
         "parts": [f"""Usar o arquivo {df_proximas} para responder perguntas a respeito de próximas partidas da FURIA na LTA Sul ou CBLOL,  dentro de {df_proximas} retorne a que tem a data mais próxima do dia de hoje.
                    PERGUNTAS QUE PODEM VIR: 
-                   - Quando vai ser a proxima partida da Furia? (ou semelhante)
+                   - Quando vai ser a proxima partida da Furia na LTA SUL? (ou semelhante)
                   
                    IMPORTANTE:
                    NUNCA USE O DF{df_ultimas} PARA RESPONDER A PERGUNTAS SOBRE PROXIMAS PARTIDAS"""]
@@ -101,7 +105,7 @@ history_inicial = [
     },
     {
         "role": "user",
-        "parts": [f"""Usar o arquivo {df_player_stats} para responder perguntas a respeito das estatisticas individuais ou a perguntas de como foi a partida ultima partida.
+        "parts": [f"""Usar o arquivo {df_player_stats} para responder perguntas a respeito das estatisticas individuais ou a perguntas de como foi a partida ultima partida da LTA Sul.
                    **Nunca** retorne estatisticas somadas da FURIA
                    Antes de retornar qualquer coisa veja se teve mais do oque uma partida da FURIA e apenas da FURIA no mesmo dia, no caso uma MD3 ou MD5, use a 'DATA' dentro de {df_player_stats}
                    Dai depois de verificar se teve mais de uma partida em {df_player_stats} no mesmo dia, voce retorna as seguinte informacoes da FURIA de todas as partidas que tiveram no dia, informacoes de qual foi primeira partida e estatistica de cada jogador(colete as informacoes que estao na mesma fileira):
@@ -133,5 +137,31 @@ history_inicial = [
                    Caso contrario retorne que ainda nao tem informacoes oficiais 
 
                   """""]
+    },
+
+
+    {
+        "role": "user",
+        "parts": [f"""Usar o arquivo {df_proximas_cs} para responder perguntas a respeito de próximas partidas da FURIA no CS,  dentro de {df_proximas_cs} retorne a que tem a data mais próxima do dia de hoje.
+                   PERGUNTAS QUE PODEM VIR: 
+                   - Quando vai ser a proxima partida da Furia na LTA SUL? (ou semelhante)
+                  
+                   IMPORTANTE:
+                   NUNCA USE O DF{df_ultimas_cs} PARA RESPONDER A PERGUNTAS SOBRE PROXIMAS PARTIDAS"""]
+    },
+    {
+        "role": "user",
+        "parts": [f"""Usar o arquivo {df_ultimas_cs} para responder perguntas a respeito de últimas partidas da FURIA na LTA Sul ou CBLOL, e dentro de {df_ultimas_cs} retorne a que tem a data mais próxima do dia de hoje.
+                   PERGUNTAS QUE PODEM VIR: 
+                   - Quando foi a ultima partida da Furia? (ou semelhante)
+
+                   IMPORTANTE:
+                   NUNCA USE O DF{df_proximas_cs} PARA RESPONDER A PERGUNTAS SOBRE ULTIMAS PARTIDAS"""]
+    },
+    {
+        "role": "user",
+        "parts": [f"""E para pegar estatistica mais avancada sobre a partida do CS use {df_player_stats_cs}.
+                   Estatisticas como, Kills, mortes, assistencia e Time inimigo. 
+                  """]
     }
 ]

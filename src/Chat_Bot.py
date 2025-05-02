@@ -20,7 +20,7 @@ col1, col2 = st.columns([10, 3])
 
 with col1:
     st.title("Converse com a FURIA")
-    st.subheader("Pergunte oque quiser sobre o nosso time #GoFuria")
+    st.subheader("Pergunte o que quiser sobre o nosso time #GoFuria")
 
 st.markdown("--------------------------------------------------")
 
@@ -37,10 +37,9 @@ with st.sidebar:
     "[Twitter.com](https://x.com/FURIA)"
    
 
-
 user_input = st.chat_input("Digite sua pergunta aqui...")
 
-for i in range(6, len(st.session_state.history) - 1 , 2):
+for i in range(9, len(st.session_state.history) - 1 , 2):
         user_msg = st.session_state.history[i]["parts"][0]
         bot_msg = st.session_state.history[i+1]["parts"][0]
         with st.chat_message("user"):

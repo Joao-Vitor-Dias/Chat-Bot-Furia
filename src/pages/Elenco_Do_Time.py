@@ -39,3 +39,12 @@ elif opcao == "CS:GO":
         st.subheader(membro["nome"])
         st.image(membro["imagem_url"], width=150)  # Ajuste o tamanho da imagem
         st.write("---") 
+
+with st.sidebar:
+    
+    st.subheader(" Acesse a nossa loja oficial: ")
+    "[Furia.gg](https://www.furia.gg/)"
+
+    st.subheader(" Siga a gente em nossas redes para não perder nada: ")
+    "[Instagram.com](https://www.instagram.com/furiagg/)"
+    "[Twitter.com](https://x.com/FURIA)"

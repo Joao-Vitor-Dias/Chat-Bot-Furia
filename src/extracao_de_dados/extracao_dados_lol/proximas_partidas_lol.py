@@ -51,23 +51,22 @@ def converter_data_ua(data_str):
     except Exception as e:
         return data_str
 
-ultimas_partidas = site.find_all("div", attrs={"class":"table-row table-row--finished"})
 
-for ultima_partida in ultimas_partidas:
-    nomes_times = ultima_partida.find_all("div", attrs={"class" : "team-name"})
-    placar = ultima_partida.find("div", attrs={"class": "c-match-score score c-match-score--small"})
-    data = ultima_partida.find("span", attrs={"class": "date"})
-    torneio = ultima_partida.find("p", attrs={"class": "tournament-name"})
+proximas_partidas = site.find_all("div", attrs={"class":"table-row table-row--upcoming"})
 
-    data_formatada = converter_data_ua(data.text)
+for proxima_partida in proximas_partidas:
+    nomes_time = proxima_partida.find_all("div", attrs ={"class" : "team-name"})
+    data_jogo = proxima_partida.find("span", attrs = {"class" : "date"})
+    torneio = proxima_partida.find("p", attrs={"class": "tournament-name"})
 
-    partidas.append([nomes_times[0].text,placar.text,nomes_times[1].text, data_formatada,torneio.text])
+    data_formatada = converter_data_ua(data_jogo.text)
 
-lista_ultimas_partidas = pd.DataFrame(partidas,columns=["TIME 1", "PLACAR", "TIME 2", "DATA","TORNEIO"])
+    partidas.append([nomes_time[0].text, nomes_time[1].text ,data_formatada,torneio.text])
 
+lista_proximas_partidas = pd.DataFrame(partidas, columns= ["TIME DA FURIA", "TIME ADVERSARIO","DATA","TORNEIO"])  
 
-# O codigo abaixo vai criar um arquivo CSV com as informacoes extraidas do site sobre as ultimas partidas
-lista_ultimas_partidas.to_json("base_ultimas.json", orient="records", indent=4, force_ascii=False, index=False) 
+# O codigo abaixo vai criar um arquivo CSV com as informacoes extraidas do site sobre as proximas partidas
+lista_proximas_partidas.to_json("base_proximas_lol.json", orient="records", indent=4, force_ascii=False, index=False)
 
-# O codigo abaixo vai exibir no terminal as informacoes das ultimas partidas
-print(lista_ultimas_partidas)
+# O codigo abaixo vai exibir no terminal as informacoes das proximas partidas
+print(lista_proximas_partidas)

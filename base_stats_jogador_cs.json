@@ -1,0 +1,47 @@
+[
+    {
+        "PARTIDA":0,
+        "TIME":"FURIA",
+        "NOME JOGADOR":"FalleN",
+        "KILLS":22,
+        "MORTES":31,
+        "ASSISTENCIAS":10,
+        "TIME INIMIGO":"The MongolZ"
+    },
+    {
+        "PARTIDA":0,
+        "TIME":"FURIA",
+        "NOME JOGADOR":"yuurih",
+        "KILLS":37,
+        "MORTES":33,
+        "ASSISTENCIAS":18,
+        "TIME INIMIGO":"The MongolZ"
+    },
+    {
+        "PARTIDA":0,
+        "TIME":"FURIA",
+        "NOME JOGADOR":"KSCERATO",
+        "KILLS":40,
+        "MORTES":34,
+        "ASSISTENCIAS":11,
+        "TIME INIMIGO":"The MongolZ"
+    },
+    {
+        "PARTIDA":0,
+        "TIME":"FURIA",
+        "NOME JOGADOR":"chelo",
+        "KILLS":24,
+        "MORTES":35,
+        "ASSISTENCIAS":9,
+        "TIME INIMIGO":"The MongolZ"
+    },
+    {
+        "PARTIDA":0,
+        "TIME":"FURIA",
+        "NOME JOGADOR":"Skullz",
+        "KILLS":21,
+        "MORTES":32,
+        "ASSISTENCIAS":8,
+        "TIME INIMIGO":"The MongolZ"
+    }
+]
