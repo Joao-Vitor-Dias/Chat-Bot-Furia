@@ -1,7 +1,4 @@
 dotenv
-langchain
-torch
-fastapi
 google-generativeai
 requests
 beautifulsoup4
