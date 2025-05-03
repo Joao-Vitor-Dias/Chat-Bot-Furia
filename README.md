@@ -108,3 +108,5 @@ streamlit run src/Chat_Bot.py
 
 ### O arquivo `documentos.py`  
 * ##### É onde ficam as instruções da IA e é neste arquivo onde os dados são utilizados para alimentar a IA.
+
+------
