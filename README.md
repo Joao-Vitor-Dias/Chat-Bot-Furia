@@ -76,7 +76,8 @@ streamlit run src/Chat_Bot.py
 
 * ##### Esta pasta é onde está toda a lógica para extração de informações de uma página web dedicada para estatísticas de partidas profissionais da LTA Sul, CS:GO, entre outros jogos.
 
-### Dentro desta pasta tem outras duas subpastas: `extracao_dados_cs` e `extracao_dados_lol`, cada uma armazena a lógica de extração de seus respectivos jogos.
+### Dentro desta pasta tem outras duas subpastas:
+* ##### `extracao_dados_cs` e `extracao_dados_lol`, cada uma armazena a lógica de extração de seus respectivos jogos.
 
 ### Dentro da pasta `extracao_dados_cs` tem os arquivos `estatisticas_jogadores_cs.py` e `ultimas_partidas_cs.py`.
 
