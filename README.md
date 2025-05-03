@@ -52,6 +52,8 @@ streamlit run src/Chat_Bot.py
 ### <u>5. Agora sinta-se livre para testar o chat 😎</u>  
 ### Caso queira, tem também um arquivo `perguntas_teste.txt` com algumas perguntas já prontas para teste.  
 
+### Video de uso do chatbot
+https://youtu.be/0AYyPS0zLE8
 -------------  
 --------------  
 ## ***Funções e usos do chatbot***  
