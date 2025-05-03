@@ -39,7 +39,7 @@ with st.sidebar:
 
 user_input = st.chat_input("Digite sua pergunta aqui...")
 
-for i in range(9, len(st.session_state.history) - 1 , 2):
+for i in range(12, len(st.session_state.history) - 1 , 2):
         user_msg = st.session_state.history[i]["parts"][0]
         bot_msg = st.session_state.history[i+1]["parts"][0]
         with st.chat_message("user"):

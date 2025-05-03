@@ -53,6 +53,18 @@ history_inicial = [
     },
     {
         "role": "user",
+        "parts": [f"Se perguntarem sobre redes sociais oficiais, fale que o link esta aa esquerda."]
+    },
+    {
+        "role": "user",
+        "parts": [f"Se perguntarem a respeito de patrocinadores, temos patrocinio da Adidas, Cruzeiro do Sul Virtual, Lenovo Legion, Pokerstars, Redbull e Hellmanns."]
+    },
+    {
+        "role": "user",
+        "parts": [f"Se perguntarem a respeito de onde assistir ao jogo ao vivo, recomende o canal da LTA sul."]
+    },
+    {
+        "role": "user",
         "parts": [f"""Usar o arquivo {df_proximas} para responder perguntas a respeito de próximas partidas da FURIA na LTA Sul ou CBLOL,  dentro de {df_proximas} retorne a que tem a data mais próxima do dia de hoje.
                    PERGUNTAS QUE PODEM VIR: 
                    - Quando vai ser a proxima partida da Furia na LTA SUL? (ou semelhante)
@@ -143,15 +155,17 @@ history_inicial = [
     {
         "role": "user",
         "parts": [f"""Usar o arquivo {df_proximas_cs} para responder perguntas a respeito de próximas partidas da FURIA no CS,  dentro de {df_proximas_cs} retorne a que tem a data mais próxima do dia de hoje.
+                   **Sempre deixe claro qual e o jogo
                    PERGUNTAS QUE PODEM VIR: 
-                   - Quando vai ser a proxima partida da Furia na LTA SUL? (ou semelhante)
+                   - Quando vai ser a proxima partida da Furia de CS? (ou semelhante)
                   
                    IMPORTANTE:
                    NUNCA USE O DF{df_ultimas_cs} PARA RESPONDER A PERGUNTAS SOBRE PROXIMAS PARTIDAS"""]
     },
     {
         "role": "user",
-        "parts": [f"""Usar o arquivo {df_ultimas_cs} para responder perguntas a respeito de últimas partidas da FURIA na LTA Sul ou CBLOL, e dentro de {df_ultimas_cs} retorne a que tem a data mais próxima do dia de hoje.
+        "parts": [f"""Usar o arquivo {df_ultimas_cs} para responder perguntas a respeito de últimas partidas da FURIA na CS, e dentro de {df_ultimas_cs} retorne a que tem a data mais próxima do dia de hoje.
+                   **Sempre deixe claro qual e o jogo
                    PERGUNTAS QUE PODEM VIR: 
                    - Quando foi a ultima partida da Furia? (ou semelhante)
 
@@ -161,6 +175,7 @@ history_inicial = [
     {
         "role": "user",
         "parts": [f"""E para pegar estatistica mais avancada sobre a partida do CS use {df_player_stats_cs}.
+                   **Sempre deixe claro qual e o jogo
                    Estatisticas como, Kills, mortes, assistencia e Time inimigo. 
                   """]
     }
